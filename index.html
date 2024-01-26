@@ -5,23 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styling/universal.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>Home
+<header class>
+    <nav class="bg-transparent flex justify-between pt-2">
+        <span class="text-xl flex items-center ml-10 font-bold">Portfolia
+        </span>
+        <ul class="px-2 py-4 pr-11 flex space-x-11 justify-end ">
+            <li class>
+                <a href="#">Home</a>
             </li>
             <li>
-                About
+                 <a href="#">About</a>
             </li>
             <li>
-                Projects
+                <a href="#">Work</a>
             </li>
             <li>
-                Contact
+                <a href="#">Contact</a>
             </li>
         </ul>
+        <div class="flex">
+            <div class="hamburger inline-block p-4 cursor-pointer lg:hidden">
+            <div class="line h-0.5 w-6 my-1 bg-black"></div>
+            <div class="line h-0.5 w-6 my-1 bg-black"></div>
+            <div class="line h-0.5 w-6 my-1 bg-black"></div>
+        </div>
+    </div>
     </nav>
+    <banner>
+
+    </banner>
+</header>
+    
     <main>
         <section class="Skills">
 
