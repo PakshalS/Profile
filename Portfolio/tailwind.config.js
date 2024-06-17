@@ -4,7 +4,11 @@ export default {
 "./index.html",
 "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'about-back': "url('/src/assets/banner-bg.png')",
+      }
+    },
   },
   plugins: [],
 }

@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navigationbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav className="navbar">
-      <ul>
-        <li><Link to="about" smooth={true} duration={500}>About</Link></li>
-        <li><Link to="skills" smooth={true} duration={500}>Skills</Link></li>
-        <li><Link to="projects" smooth={true} duration={500}>Projects</Link></li>
-        <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
+    <nav className="bg-black h-16 flex justify-between items-center px-4 md:px-8">
+      <div className="text-white text-2xl font-mono">
+        <Link to="home" smooth={true} duration={500}>
+          Logo
+        </Link>
+      </div>
+      <div className="md:hidden">
+        <button onClick={toggleMenu} className="text-white text-2xl focus:outline-none">
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+      <ul className={`fixed top-14 left-0 w-full bg-black text-center md:relative md:top-0 md:left-0 md:w-auto md:bg-transparent md:items-center md:gap-x-14 pt-5 md:pt-0 pr-4 text-lg md:text-2xl text-white font-mono ${isOpen ? 'block' : 'hidden'} md:flex`}>
+        <li className="hover:cursor-pointer py-2 md:py-0"><Link to="about" smooth={true} duration={500} onClick={() => setIsOpen(false)}>About</Link></li>
+        <li className="hover:cursor-pointer py-2 md:py-0"><Link to="skills" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Skills</Link></li>
+        <li className="hover:cursor-pointer py-2 md:py-0"><Link to="projects" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Projects</Link></li>
+        <li className="hover:cursor-pointer py-2 md:py-0"><Link to="contact" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Contact</Link></li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Navigationbar;
-
-
 

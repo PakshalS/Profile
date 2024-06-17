@@ -8,7 +8,7 @@ import Footers from '../components/footer'
 
 const Homepage = () => {
   return (
-    <div className='bg-gray-600'>
+    <div id='home'>
       <Navigationbar/>
       <Abouts/>
       <Skills/>
