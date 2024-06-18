@@ -10,7 +10,7 @@ const Navigationbar = () => {
   };
 
   return (
-    <nav className="bg-black h-16 flex justify-between items-center px-4 md:px-8">
+    <nav className="bg-black h-16 flex justify-between items-center px-4 md:px-8 z-50 relative">
       <div className="text-white text-2xl font-mono">
         <Link to="home" smooth={true} duration={500}>
           Logo
