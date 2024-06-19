@@ -1,6 +1,6 @@
 import React from 'react';
 import image from '../assets/contact-img.png'; 
-import file from '../assets/PAKSHALSHAH_SYIT-DJSCE26.pdf';
+import file from '../PAKSHALSHAH_SYIT-DJSCE26.pdf';
 
 const ContactForm = () => {
   const onButtonClick = () => {
