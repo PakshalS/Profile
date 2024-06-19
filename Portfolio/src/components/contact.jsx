@@ -1,9 +1,10 @@
 import React from 'react';
 import image from '../assets/contact-img.png'; 
+import file from '../assets/PAKSHALSHAH_SYIT-DJSCE26.pdf';
 
 const ContactForm = () => {
   const onButtonClick = () => {
-    const pdfUrl = "src/assets/PAKSHALSHAH_SYIT-DJSCE26.pdf";
+    const pdfUrl = {file};
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "PAKSHALSHAH_SYIT-DJSCE26.pdf"; 

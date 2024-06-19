@@ -1,4 +1,7 @@
 import React from 'react';
+import linkedin from '../assets/linkedin.png';
+import insta from '../assets/instagram.png';
+import github from '../assets/github.png';
 
 const Footers = () => {
   return (
@@ -9,17 +12,17 @@ const Footers = () => {
         </div>
         <div className="flex space-x-8 mb-4 md:mb-0">
         <a href="https://www.linkedin.com/in/pakshal-shah-946368244/" target="_blank" rel="noopener noreferrer">
-            <img src="src/assets/linkedin.png" alt="LinkedIn" className="h-8 w-8" />
+            <img src={linkedin} alt="LinkedIn" className="h-8 w-8" />
           </a>
           <a href="https://www.instagram.com/pakshalhere?igsh=ZGRrNWc3cDBjNGx4" target="_blank" rel="noopener noreferrer">
-            <img src="src/assets/instagram.png" alt="Instagram" className="h-8 w-8" />
+            <img src={insta} alt="Instagram" className="h-8 w-8" />
           </a>
           <a href="https://github.com/PakshalS" target="_blank" rel="noopener noreferrer">
-            <img src="src/assets/github.png" alt="Github" className="h-8 w-8" />
+            <img src={github} alt="Github" className="h-8 w-8" />
           </a>
         </div>
         <div className="text-sm">
-          &copy; 2022. All Rights Reserved
+          &copy; 2024. All Rights Reserved
         </div>
       </div>
     </footer>
