@@ -7,14 +7,17 @@ import project3 from '../assets/project-img3.png';
 
 const projects = {
   tab1: [
-    { id: 1, title: 'Travel The World', image: project1 },
-    { id: 2, title: 'Let\'s Do It Together', image: project2 },
-    { id: 3, title: 'Boost Your Startup', image: project3 },
+    { id: 1, title: 'Solar Monitoring System', image: project1 },
+    { id: 2, title: 'Smart Meeting Manager', image: project2 },
+    { id: 3, title: 'Profile Website', image: project3 },
   ],
   tab2: [
-    
+    { id: 4, title: 'Project 4', image: project1 },
+    { id: 5, title: 'Project 5', image: project2 },
+    { id: 6, title: 'Project 6', image: project3 },
   ],
   tab3: [
+    
   ]
 };
 
@@ -26,7 +29,7 @@ const ProjectsSection = () => {
       <div className="container mx-auto text-center px-4 md:px-0">
         <h2 className="text-4xl font-bold mb-4">Projects</h2>
         <p className="max-w-xl mx-auto mb-8">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, vel? Maiores voluptates culpa nihil modi voluptatum consectetur, ea totam quas saepe incidunt eveniet sit vero officia! Sint iste enim quos?
         </p>
         <div className="flex justify-center mb-8">
           <Tab label="Tab 1" activeTab={activeTab} setActiveTab={setActiveTab} />

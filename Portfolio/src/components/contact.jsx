@@ -12,7 +12,7 @@ const ContactForm = () => {
     document.body.removeChild(link);
 };
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-pink-600 to-red-500 py-16" id='contact'>
+    <div className="bg-gradient-to-r from-black via-pink-600 to-black py-16" id='contact'>
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center lg:space-x-8 px-4">
         <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
           <img src={image} alt="Contact Illustration" className="w-full h-auto" />

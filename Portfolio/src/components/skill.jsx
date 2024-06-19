@@ -31,7 +31,7 @@ const Skills = () => {
         <div className="container mx-auto px-4">
             <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold mb-4">Skills</h2>
-                <p className="text-lg text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> Lorem Ipsum has been the industry's standard dummy text.</p>
+                <p className="text-lg text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi mollitia harum molestiae, accusantium ex sint suscipit eligendi labore laudantium alias expedita asperiores vitae, iusto doloribus recusandae accusamus praesentium adipisci. Adipisci.<br /></p>
             </div>
             <Carousel 
               responsive={responsive} 

@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 
 const Abouts = () => {
   return (
-    <div className="relative bg-cover bg-center min-h-screen bg-about-back ">
+    <div id='about' className="relative top-10 bg-cover bg-center min-h-screen bg-about-back ">
       <div className="container mx-auto px-6 py-16 md:py-24 lg:pt-10">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-white text-center md:text-left">
