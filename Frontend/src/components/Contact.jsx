@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Mail, MapPin, Send } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import emailjs from "@emailjs/browser";
@@ -9,6 +9,7 @@ import emailjs from "@emailjs/browser";
 const ContactSection = () => {
   const ref = useRef(null);
   const [isInView, setIsInView] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,26 +31,28 @@ const ContactSection = () => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-  
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-  
-    emailjs
-      .send(serviceId, templateId, formState, publicKey)
-      .then(() => {
-        alert("Message sent successfully!");
-        setFormState({ name: "", email: "", subject: "", message: "" });
-      })
-      .catch((error) => {
-        console.error("EmailJS Error:", error);
-        alert("Failed to send message. Please try again.");
-      });
+
+    try {
+      await emailjs.send(serviceId, templateId, formState, publicKey);
+      alert("Message sent successfully!");
+      setFormState({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setTimeout(() => setIsSubmitting(false), 2000);
+    }
   };
 
-  const contactInfo = [
+    const contactInfo = [
     {
       icon: <Mail className="h-5 w-5" />,
       title: "Email",
@@ -77,6 +80,7 @@ const ContactSection = () => {
     },
   ];
 
+
   return (
     <section
       id="contact"
@@ -98,16 +102,15 @@ const ContactSection = () => {
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={isInView ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+            transition={{ duration: 0.5, delay: 0.2 }}>
             <Card className="shadow-lg rounded-lg">
-              <CardContent>
-                <h3 className="text-2xl font-bold">Let's Talk</h3>
-                <p className="text-gray-500">
-                  Reach out for collaborations or any inquiries.
-                </p>
-                <div className="space-y-4 mt-4">
-                  {contactInfo.map((info, index) => (
+               <CardContent>
+                 <h3 className="text-2xl font-bold">Let's Talk</h3>
+                 <p className="text-gray-500">
+                   Reach out for collaborations or any inquiries.
+                 </p>
+                 <div className="space-y-4 mt-4">
+                   {contactInfo.map((info, index) => (
                     <div
                       key={index}
                       className="p-4 flex items-center gap-4 rounded-lg"
@@ -197,9 +200,10 @@ const ContactSection = () => {
                   ></textarea>
                   <Button
                     type="submit"
+                    disabled={isSubmitting}
                     className="w-full p-3 bg-primary rounded-full hover:bg-primary/80 transition-all flex items-center justify-center gap-2"
                   >
-                    <Send className="h-4 w-4" /> Send Message
+                    <Send className="h-4 w-4" /> {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
