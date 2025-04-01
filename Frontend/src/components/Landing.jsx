@@ -35,7 +35,7 @@ export default function LandingSection() {
     <section 
       id="home" 
       ref={ref} 
-      className="relative min-h-screen flex flex-col md:flex-row justify-center items-center pl-10 pt-10 pb-20 sm:pb-0 px-6 transition-all duration-300"
+      className="relative min-h-screen flex flex-col md:flex-row justify-center items-center lg:pl-35 lg:pr-30 pl-10 pr-10 pt-10 pb-20 sm:pb-0 px-6 transition-all duration-300"
       style={{
         backgroundImage: `url(${isDarkMode ? darkBg : lightBg})`,
         backgroundSize: "cover",
@@ -59,7 +59,7 @@ export default function LandingSection() {
         <motion.h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
           Pakshal Shah
         </motion.h1>
-        <motion.h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-600">
+        <motion.h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
           <Typewriter
             words={["Full Stack Web Developer", "Flutter Developer", "Student"]}
             loop={0}
@@ -70,7 +70,7 @@ export default function LandingSection() {
             delaySpeed={1000}
           />
         </motion.h3>
-        <motion.p className="max-w-xl text-gray-600">
+        <motion.p className="max-w-xl">
           A Passionate Full Stack Developer with a strong technical background in 
           MERN Stack and Flutter for cross-platform mobile applications.  
         </motion.p>

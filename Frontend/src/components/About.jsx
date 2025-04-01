@@ -27,7 +27,7 @@ export default function AboutSection() {
 };
 
   return (
-    <section id="about" ref={ref} className="py-20 px-6 md:px-12 ">
+    <section id="about" ref={ref} className="py-20  lg:pl-35 lg:pr-30 px-6 md:px-12 ">
       <motion.div
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}

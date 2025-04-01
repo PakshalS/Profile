@@ -80,7 +80,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-10 px-6 md:px-12 max-w-full overflow-hidden"
+      className="py-10 lg:pl-35 lg:pr-30 px-6 md:px-12 max-w-full overflow-hidden"
       ref={ref}
     >
       <motion.div

@@ -34,7 +34,7 @@ const ExperienceSection = () => {
   }, []);
 
   return (
-    <section id="experience" className="py-20 px-6 md:px-12 max-w-full overflow-hidden" ref={ref}>
+    <section id="experience" className="py-20 px-6 md:px-12   lg:pl-35 lg:pr-30 max-w-full overflow-hidden" ref={ref}>
       <motion.div initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: 0.5 }} className="space-y-12">
         <div className="text-center space-y-2">
           <h2 className="text-3xl font-bold tracking-tight">My Experience</h2>

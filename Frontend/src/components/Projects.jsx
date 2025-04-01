@@ -58,7 +58,7 @@ export function ProjectsSection() {
   const [filter, setFilter] = useState(availableTabs[0] || "");
 
   return (
-    <section id="projects" className="py-20 px-6" ref={ref}>
+    <section id="projects" className="py-20  lg:pl-35 lg:pr-30 px-6" ref={ref}>
       <div className="space-y-12 text-center">
         <h2 className="text-3xl font-bold tracking-tight">My Projects</h2>
         <p className="text-muted-foreground">Some of my recent work</p>

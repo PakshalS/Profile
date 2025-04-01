@@ -19,7 +19,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 sm:px-10 lg:px-20" ref={ref}>
+    <section id="skills" className="py-20 px-6  lg:pl-35 lg:pr-30 sm:px-10 lg:px-20" ref={ref}>
       <motion.div initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: 0.5 }} className="space-y-12">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }} transition={{ duration: 0.7 }} className="text-center">
           <h2 className="text-3xl font-bold">My Skills</h2>
